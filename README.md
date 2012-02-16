@@ -10,7 +10,7 @@ Usage
 General guidance: open the project in IntelliJ, then setup a Tomcat server, then deploy and run the project.
 
 
-Meta
-----
+Author
+------
 
-Created by Ian Downard.
+Created by Ian Downard, February 2012.
