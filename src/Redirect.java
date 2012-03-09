@@ -155,7 +155,7 @@ public class Redirect extends HttpServlet {
 
                 "<body>" +
                 "<h2>Welcome!</h2>" +
-                "<p class=\"message_text\">This is a demonstration of JSP, Servlet, Jericho HTML parsing, and Google Chart technologies. The servlet utilizes the Jericho HTML Parser (http://jericho.htmlparser.net) to obtain weather data for Mt. Hood from the Northwest Weather and Avalanche Center (http://www.nwac.us). The Google Charts API is then invoked to produce a couple line charts of temperature data in a JSP page.</p>" +
+                "<p class=\"message_text\">This is a demonstration of JSP, Servlet, Jericho HTML parsing, and Google Chart technologies. The servlet utilizes the Jericho HTML Parser (http://jericho.htmlparser.net) to obtain weather data for Mt. Hood from the Northwest Weather and Avalanche Center (http://www.nwac.us). The Google Charts API is then invoked to produce the line charts shown below.</p>" +
                 "<p class=\"message_text\">You can download this project from, <A HREF=\"https://github.com/iandow/GoogleChartsStudy\">https://github.com/iandow/GoogleChartsStudy</A><br> <br> <br></p>"+
                 "<p><div id=\"chart_div\"></div></p>" +
                 "</body></html>");
