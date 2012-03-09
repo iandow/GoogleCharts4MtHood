@@ -30,6 +30,7 @@
       </library>
     </orderEntry>
     <orderEntry type="library" name="Unnamed" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="JBoss 6.1.0.Final" level="application_server_libraries" />
   </component>
 </module>
 

@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.PrintWriter;
 
 public class Redirect extends HttpServlet {
-   /* private static class Record {
+    /* private static class Record {
         Integer temp6540;
         Integer temp5380;
         Integer rh6540;
@@ -128,10 +128,10 @@ public class Redirect extends HttpServlet {
                 out.println(",");
             } else {
                 out.println("]);");
-              }
+            }
         }
 
-                out.println("var options = {" +
+        out.println("var options = {" +
                 "width: 1000, height: 240," +
                 "title: 'Temperature on Mt. Hood', legend: {position: 'top'}, vAxis: {title: 'Temp F'}, hAxis: {title: 'Time (PT)', format:'MMM d hh:mm'}};" +
                 "var chart = new google.visualization.LineChart(document.getElementById('chart_div'));" +
@@ -139,8 +139,25 @@ public class Redirect extends HttpServlet {
                 "}" +
                 "</script>" +
                 "</head>" +
+                "<style type=\"text/css\">"+
+                "body {"+
+                "    font-family: verdana, tahoma, sans-serif;"+
+                "    text-align: left;"+
+                "}"+
+                "h2 {"+
+                "    margin-top: 50px;"+
+                "    color: #cc6666;"+
+                "}"+
+                ".message_text {"+
+                "color: #996666;"+
+                "}"+
+                "</style>"+
+
                 "<body>" +
-                "<div id=\"chart_div\"></div>" +
+                "<h2>Welcome!</h2>" +
+                "<p class=\"message_text\">This is a demonstration of JSP, Servlet, Jericho HTML parsing, and Google Chart technologies. The servlet utilizes the Jericho HTML Parser (http://jericho.htmlparser.net) to obtain weather data for Mt. Hood from the Northwest Weather and Avalanche Center (http://www.nwac.us). The Google Charts API is then invoked to produce a couple line charts of temperature data in a JSP page.</p>" +
+                "<p class=\"message_text\">You can download this project from, <A HREF=\"https://github.com/iandow/GoogleChartsStudy\">https://github.com/iandow/GoogleChartsStudy</A><br> <br> <br></p>"+
+                "<p><div id=\"chart_div\"></div></p>" +
                 "</body></html>");
 
     }
