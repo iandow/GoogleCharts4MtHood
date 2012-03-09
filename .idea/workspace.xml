@@ -20,10 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4e52f5e7-311c-4720-ac24-b4a12604152e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/README" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GoogleChartsStudy.iml" afterPath="$PROJECT_DIR$/GoogleChartsStudy.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Redirect.java" afterPath="$PROJECT_DIR$/src/Redirect.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="GoogleCharts.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -112,7 +109,7 @@
       <file leaf-file-name="README.md" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="4" selection-start="505" selection-end="505" vertical-scroll-proportion="0.28846154">
+            <state line="16" column="20" selection-start="691" selection-end="691" vertical-scroll-proportion="0.51282054">
               <folding />
             </state>
           </provider>
@@ -803,7 +800,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="4" selection-start="505" selection-end="505" vertical-scroll-proportion="0.28846154">
+        <state line="16" column="20" selection-start="691" selection-end="691" vertical-scroll-proportion="0.51282054">
           <folding />
         </state>
       </provider>
