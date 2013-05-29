@@ -33,11 +33,14 @@ public class Redirect extends HttpServlet {
         Integer totalsnow;
         Integer pressmb;
     }*/
-    static List<List> records;
+    //static List<List> records;
+    static List records;
 
     public static void getData(PrintWriter out) throws InterruptedException, IOException {
-        List<String> this_record;
-        records = new ArrayList<List>();
+        //List<String> this_record;
+        List this_record;
+        //records = new ArrayList<List>();
+        records = new ArrayList();
         String sourceUrlString = "";
         Source source=null;
         StreamedSource streamed_source = null;
@@ -68,7 +71,8 @@ public class Redirect extends HttpServlet {
             pattern = Pattern.compile("\\d+\\s+");
             matcher = pattern.matcher(thisLine);
 
-            this_record = new ArrayList<String>();
+            //this_record = new ArrayList<String>();
+            this_record = new ArrayList();
             while (matcher.find()) {
                 String datapoint = matcher.group().trim();
                 //out.println("<BR>Found: " + datapoint);
@@ -120,9 +124,12 @@ public class Redirect extends HttpServlet {
                 "data.addRows([");
 
         for (int i=0; i<records.size(); i++) {
-            List<String> record = records.get(i);
-            Integer month = (Integer.valueOf(record.get(0)))-1;
-            Integer hour = (Integer.valueOf(record.get(2)))/100;
+            //List<String> record = records.get(i);
+            //Integer month = (Integer.valueOf(record.get(0)))-1;
+            //Integer hour = (Integer.valueOf(record.get(2)))/100;
+            List record = (List)records.get(i);
+            int month = (Integer.parseInt((record.get(0)).toString()))-1;
+            int hour = (Integer.parseInt((record.get(2)).toString()))/100;
             out.println("[new Date(2012," + month + "," + record.get(1) + "," + hour + "), " + record.get(3) + ", " + record.get(4) + "]");
             if (i < ((records.size())-1)) {
                 out.println(",");
@@ -156,7 +163,7 @@ public class Redirect extends HttpServlet {
                 "<body>" +
                 "<h2>Welcome!</h2>" +
                 "<p class=\"message_text\">This is a demonstration of JSP, Servlet, Jericho HTML parsing, and Google Chart technologies. The servlet utilizes the Jericho HTML Parser (http://jericho.htmlparser.net) to obtain weather data for Mt. Hood from the Northwest Weather and Avalanche Center (http://www.nwac.us). The Google Charts API is then invoked to produce the line charts shown below.</p>" +
-                "<p class=\"message_text\">You can download this project from, <A HREF=\"https://github.com/iandow/GoogleChartsStudy\">https://github.com/iandow/GoogleChartsStudy</A><br> <br> <br></p>"+
+                "<p class=\"message_text\">You can download this project from, <A HREF=\"https://github.com/iandow/GoogleCharts4MtHood\">https://github.com/iandow/GoogleCharts4MtHood</A><br> <br> <br></p>"+
                 "<p><div id=\"chart_div\"></div></p>" +
                 "</body></html>");
 
