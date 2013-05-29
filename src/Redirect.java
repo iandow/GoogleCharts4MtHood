@@ -35,6 +35,9 @@ public class Redirect extends HttpServlet {
     }*/
     //static List<List> records;
     static List records;
+    // The number of columns in the NWAC weather page is 13 in the summer because they omit the column for 24 hour snow
+    static final int SUMMER_COLUMNS = 13;
+    static final int WINTER_COLUMNS = 14;
 
     public static void getData(PrintWriter out) throws InterruptedException, IOException {
         //List<String> this_record;
@@ -78,7 +81,8 @@ public class Redirect extends HttpServlet {
                 //out.println("<BR>Found: " + datapoint);
                 this_record.add(datapoint);
             }
-            if (this_record.size() == 14) {
+
+            if (this_record.size() == SUMMER_COLUMNS || this_record.size() == WINTER_COLUMNS ) {
                 //while (records.size() > 20) { records.remove(0); }
                 //out.println(("<BR>this_record size " + this_record.size() + ": " + this_record + ""));
                 records.add(this_record);
